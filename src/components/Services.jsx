@@ -10,8 +10,8 @@ const TechIntegration = () => {
     { name: 'Flutter', icon: 'F' },
     { name: 'PostgreSQL', icon: 'P' },
     { name: 'OpenAI', icon: 'AI' },
-    { name: 'Docker', icon: 'D' },
-    { name: 'Stripe', icon: 'S' },
+    { name: 'LangChain', icon: 'LC' },
+    { name: 'Gemini', icon: 'G' },
     { name: 'n8n', icon: '8' }
   ];
 

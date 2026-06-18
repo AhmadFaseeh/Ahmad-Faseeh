@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { SectionLabel } from './Common';
 
@@ -33,9 +32,9 @@ const RecognitionCard = ({ title, issuer, date, index }) => (
 
 const Testimonials = () => {
   const awards = [
+    { title: "Web Designer", issuer: "App Developers Hub", date: "2024" },
     { title: "Outstanding Full-Stack Performance", issuer: "IT KUMAIL", date: "2025" },
-    { title: "Mobile Innovation Award", issuer: "App Developers Hub", date: "2024" },
-    { title: "Excellence in UI/UX Design", issuer: "Creative Collective", date: "2024" }
+    { title: "AI Engineer", issuer: "Future Makers", date: "2026" },
   ];
 
   return (

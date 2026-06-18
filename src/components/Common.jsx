@@ -48,14 +48,14 @@ export const CustomCursor = () => {
 };
 
 export const BrowserMockup = ({ children, className = "" }) => (
-  <div className={`browser-mockup ${className}`}>
+  <div className={`browser-mockup flex flex-col ${className}`}>
     <div className="browser-header">
       <div className="dot-btn bg-red-500/50" />
       <div className="dot-btn bg-yellow-500/50" />
       <div className="dot-btn bg-green-500/50" />
       <div className="ml-4 h-4 w-32 bg-zinc-800 rounded-full" />
     </div>
-    <div className="relative">
+    <div className="flex-1 relative w-full h-full min-h-0 overflow-hidden">
       {children}
     </div>
   </div>

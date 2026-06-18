@@ -1,4 +1,3 @@
-import React from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -13,12 +12,10 @@ import { CustomCursor, Divider } from './components/Common';
 function App() {
   return (
     <div className="relative bg-bg-primary min-h-screen">
-      {/* Visual Overlays */}
       <div className="noise" />
       <div className="fixed inset-0 bg-dots opacity-[0.03] pointer-events-none" />
       <CustomCursor />
 
-      {/* Main Content */}
       <Navbar />
       
       <main>

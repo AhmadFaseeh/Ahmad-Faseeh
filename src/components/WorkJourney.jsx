@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { SectionLabel } from './Common';
 import { WORK_EXPERIENCE, JOURNEY } from '../utils/data';
@@ -28,9 +27,18 @@ const WorkJourney = () => {
                 <h4 className="text-white text-lg font-mono uppercase tracking-widest mb-4 group-hover:translate-x-2 transition-transform duration-300">
                   {work.role}
                 </h4>
-                <p className="text-text-secondary text-sm leading-relaxed max-w-md">
+                <p className="text-text-secondary text-sm leading-relaxed max-w-md mb-6">
                   {work.description}
                 </p>
+                {work.tech && (
+                  <div className="flex flex-wrap gap-2">
+                    {work.tech.map((t) => (
+                      <span key={t} className="px-2 py-0.5 border border-zinc-800 text-[9px] font-mono uppercase text-zinc-500">
+                        {t}
+                      </span>
+                    ))}
+                  </div>
+                )}
               </motion.div>
             ))}
           </div>

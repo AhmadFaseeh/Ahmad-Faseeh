@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { motion } from 'framer-motion';
 import { SectionLabel, BrowserMockup } from './Common';
 import { PROJECTS } from '../utils/data';
@@ -14,12 +14,26 @@ const ProjectCard = ({ project, index }) => {
     >
       <div className="bg-bg-card border border-zinc-900 rounded-lg overflow-hidden transition-all duration-500 group-hover:border-zinc-700 group-hover:-translate-y-2">
         <div className="p-4 md:p-8">
-           <BrowserMockup className="aspect-video bg-zinc-900 flex items-center justify-center overflow-hidden">
-             <div className="absolute inset-0 bg-gradient-to-tr from-zinc-900 to-bg-card opacity-50 group-hover:opacity-20 transition-opacity" />
-             <div className="text-[10px] font-mono text-zinc-800 uppercase tracking-widest z-10">
+           <BrowserMockup className="aspect-video bg-zinc-900 overflow-hidden relative">
+             <div className="absolute inset-0 bg-gradient-to-tr from-zinc-900 to-bg-card opacity-40 group-hover:opacity-10 transition-opacity z-10" />
+             {project.image ? (
+               <img 
+                 src={project.image} 
+                 alt={project.title} 
+                 className="w-full h-full object-cover object-top z-0 transition-transform duration-700 group-hover:scale-105"
+                 onError={(e) => {
+                   e.target.style.display = 'none';
+                   const fallback = e.target.parentElement.querySelector('.image-fallback');
+                   if (fallback) fallback.style.display = 'flex';
+                 }}
+               />
+             ) : null}
+             <div 
+               className="image-fallback absolute inset-0 flex items-center justify-center text-[10px] font-mono text-zinc-700 uppercase tracking-widest z-0"
+               style={{ display: project.image ? 'none' : 'flex' }}
+             >
                {project.title} Preview
              </div>
-             {/* If images were used: <img src={project.image} alt={project.title} className="w-full h-full object-cover" /> */}
            </BrowserMockup>
         </div>
         
@@ -38,8 +52,14 @@ const ProjectCard = ({ project, index }) => {
           </div>
           
           <div className="flex items-center gap-6 pt-4 border-t border-zinc-900/50">
-            <a href="#" className="text-[10px] font-mono uppercase tracking-widest text-white hover:underline">Live Demo →</a>
-            <a href="#" className="text-[10px] font-mono uppercase tracking-widest text-zinc-500 hover:text-white transition-colors">GitHub →</a>
+            {project.demoLink ? (
+              <a href={project.demoLink} target="_blank" rel="noopener noreferrer" className="text-[10px] font-mono uppercase tracking-widest text-white hover:underline">Live Demo →</a>
+            ) : (
+              <span className="text-[10px] font-mono uppercase tracking-widest text-zinc-600 cursor-not-allowed">In Development</span>
+            )}
+            {project.githubLink && (
+              <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className="text-[10px] font-mono uppercase tracking-widest text-zinc-500 hover:text-white transition-colors">GitHub →</a>
+            )}
           </div>
         </div>
       </div>

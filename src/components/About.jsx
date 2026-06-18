@@ -8,8 +8,8 @@ const About = () => {
       <SectionLabel text="About" />
 
       {/* Massive Background Watermark */}
-      <div className="absolute top-20 right-0 pointer-events-none select-none overflow-hidden w-full text-right opacity-[0.05]">
-        <h2 className="font-display font-bold text-[30vw] leading-none translate-x-20">
+      <div className="absolute top-20 right-5 pointer-events-none select-none overflow-hidden w-full text-right opacity-[0.05]">
+        <h2 className="font-display font-bold text-[25vw] leading-none">
           ABOUT
         </h2>
       </div>
@@ -63,7 +63,7 @@ const About = () => {
               </p>
 
               <a href="#journey" className="inline-flex items-center gap-4 group">
-                <span className="text-[11px] font-mono uppercase tracking-widest text-white">Here</span>
+                <span className="text-[11px] font-mono uppercase tracking-widest text-white">Explore my Journey</span>
                 <div className="w-12 h-[1px] bg-white group-hover:w-20 transition-all duration-500" />
                 <span className="text-white">→</span>
               </a>

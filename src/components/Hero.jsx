@@ -1,6 +1,5 @@
-import React from 'react';
 import { motion } from 'framer-motion';
-import { SectionLabel, BrowserMockup } from './Common';
+import { SectionLabel } from './Common';
 import { PERSONAL_INFO } from '../utils/data';
 
 const Hero = () => {
@@ -26,7 +25,7 @@ const Hero = () => {
             </h1>
 
             <div className="flex flex-wrap gap-4 mb-8">
-              {['Backend Architecture', 'Mobile Apps', 'AI Integrations'].map((tag) => (
+              {['AI Engineering', 'AI Automation (AIA)', 'Backend Architecture', 'Mobile Apps'].map((tag) => (
                 <span key={tag} className="px-3 py-1 border border-zinc-800 text-[10px] font-mono uppercase tracking-widest text-text-secondary">
                   {tag}
                 </span>
