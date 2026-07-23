@@ -41,11 +41,11 @@ export const WORK_EXPERIENCE = [
 ];
 
 export const JOURNEY = [
-  { year: "2021", event: "Superior College Piplan — Intermediate CS" },
-  { year: "2023", event: "PMAS Arid University — BS Software Engineering" },
-  { year: "2024", event: "Started Mobile App Development (Flutter/Dart)" },
-  { year: "2025", event: "Full-Stack & AI Automation Engineer @ IT KUMAIL" },
-  { year: "2026", event: "AI Engineer @ IT KUMAIL" }  
+  { year: "2026", event: "Full-Stack Development @ IT KUMAIL" },
+  { year: "2025", event: "WordPress & Systems Engineer @ IT KUMAIL" },
+  { year: "2023", event: "Started BS Software Engineering" },
+  { year: "2022", event: "Started WordPress Development" }
+
 ];
 
 export const SERVICES = [
@@ -94,11 +94,11 @@ export const PROJECTS = [
     githubLink: "https://github.com/AhmadFaseeh"
   },
   {
-    title: "AI Content Humanizer Tool",
+    title: "Cerahi Dentistry",
     tech: ["Next.js", "Node.js", "PostgreSQL", "AI APIs", "MongoDB", "TypeScript", "API Integration", "Framer Motion", "Tailwind CSS"],
     description: "Architected a tool for identifying and humanizing AI-generated text, utilizing a robust PostgreSQL backend and clean API layer.",
-    image: "/ai_humanizer.png",
-    demoLink: "https://ai-detector-humanizer-six.vercel.app/",
+    image: "/cerahi-dentistry.jpeg",
+    demoLink: "https://cerahidentistry.com/",
     githubLink: "https://github.com/AhmadFaseeh"
   }
 ];
