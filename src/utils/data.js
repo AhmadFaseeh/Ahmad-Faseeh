@@ -1,104 +1,275 @@
 export const PERSONAL_INFO = {
   name: "Muhammad Ahmad Faseeh",
   firstName: "Ahmad",
-  role: "Full-Stack & AI Automation Engineer",
+  title: "Software Engineer Python / FastAPI · Docker · Full-Stack",
+  role: "Software Engineer & Full-Stack Architect",
   location: "Lahore, Punjab, PK",
+  coordinates: "31.5204° N, 74.3587° E",
   email: "muhammadahmadfaseeh5@gmail.com",
-  phone: "03206493816",
-  github: "github.com/AhmadFaseeh",
-  linkedin: "linkedin.com/in/muhammadahmadfaseeh",
-  bio: "Architecting scalable backends, autonomous AI agentic workflows (AIA), and fluid mobile experiences. I specialize in AI Engineering, building production-grade AI-integrated SaaS platforms, and custom AI Automation pipelines with a focus on clean architecture.",
+  phone: "0320-6493816",
+  resume: "/Muhammad_Ahmad_Fasih.pdf",
+  github: "https://github.com/AhmadFaseeh",
+  linkedin: "https://linkedin.com/in/muhammadahmadfaseeh",
+  bio: "Software Engineer with hands-on experience building scalable backend services in Python (FastAPI), Node.js, and Next.js, and interactive front-ends in React.js. Skilled in containerizing and deploying applications with Docker, designing RESTful & GraphQL APIs, and writing clean, readable, reusable, and well-documented code with strong analytical reasoning for debugging and evaluating architectural trade-offs.",
   stats: [
-    { value: "02+", label: "Years Exp" },
-    { value: "10+", label: "Projects" },
-    { value: "20+", label: "Technologies" },
-    { value: "100%", label: "Dedication" }
+    { value: "02+", label: "Years Experience", numeric: 2 },
+    { value: "10+", label: "Production Projects", numeric: 10 },
+    { value: "25+", label: "Technologies Mastered", numeric: 25 },
+    { value: "99.9%", label: "Clean Architecture", numeric: 99.9 }
+  ],
+  systemSpecs: {
+    status: "AVAILABLE_FOR_HIRE",
+    engine: "Python / FastAPI / Docker / React",
+    architecture: "Layered Services / DTOs / Clean Architecture",
+    latency: "< 45ms P99 API Latency",
+    security: "JWT / OAuth2 / Dockerized Sandbox"
+  }
+};
+
+export const TECHNICAL_SKILLS = {
+  languages: [
+    { name: "Python", level: 92, tag: "Primary" },
+    { name: "JavaScript (ES6+)", level: 95, tag: "Core" },
+    { name: "TypeScript", level: 90, tag: "Strict" },
+    { name: "SQL (PostgreSQL, MySQL)", level: 88, tag: "Relational" },
+    { name: "PHP", level: 80, tag: "Backend" },
+    { name: "HTML5 / CSS3", level: 96, tag: "Markup" },
+    { name: "C++", level: 75, tag: "Core Alg" }
+  ],
+  backend: [
+    { name: "Python (FastAPI)", level: 94, tag: "Async Core" },
+    { name: "Node.js & Express", level: 92, tag: "REST API" },
+    { name: "NestJS", level: 86, tag: "Enterprise" },
+    { name: "RESTful & GraphQL APIs", level: 92, tag: "Architecture" },
+    { name: "JWT / OAuth Auth", level: 90, tag: "Security" },
+    { name: "LangChain & CrewAI", level: 88, tag: "Agentic AI" },
+    { name: "RAG & Vector Pipelines", level: 86, tag: "Embeddings" }
+  ],
+  frontend: [
+    { name: "React.js", level: 95, tag: "Interactive" },
+    { name: "Next.js", level: 90, tag: "SSR/App Router" },
+    { name: "GSAP Animations", level: 92, tag: "Motion" },
+    { name: "Three.js / WebGL", level: 85, tag: "3D Graphics" },
+    { name: "Tailwind CSS", level: 95, tag: "Styling" },
+    { name: "Redux Toolkit", level: 88, tag: "State" },
+    { name: "Framer Motion", level: 90, tag: "Micro-UX" }
+  ],
+  databases: [
+    { name: "PostgreSQL", level: 90, tag: "Primary RDBMS" },
+    { name: "MySQL", level: 88, tag: "RDBMS" },
+    { name: "MongoDB", level: 88, tag: "NoSQL" },
+    { name: "Vector Databases", level: 85, tag: "Pinecone/Qdrant" },
+    { name: "Firebase", level: 84, tag: "Realtime" },
+    { name: "Redis Caching", level: 88, tag: "In-Memory" }
+  ],
+  cloudDevOps: [
+    { name: "Docker & Compose", level: 90, tag: "Containerization" },
+    { name: "Containerized Deployments", level: 88, tag: "Production" },
+    { name: "Git / GitHub Workflows", level: 94, tag: "VCS / CI" },
+    { name: "Vercel & Cloudflare", level: 92, tag: "Edge / CDN" },
+    { name: "Redis Caching", level: 88, tag: "Performance" },
+    { name: "CI-style Deployment", level: 86, tag: "Automation" }
+  ],
+  practices: [
+    { name: "Clean Architecture", level: 94, tag: "Layered DTOs" },
+    { name: "Code Review & Standards", level: 92, tag: "Quality" },
+    { name: "Technical Documentation", level: 90, tag: "Specs" },
+    { name: "Performance Benchmarking", level: 88, tag: "Metrics" },
+    { name: "Debugging & Root-Cause", level: 95, tag: "Diagnostics" },
+    { name: "Agile Collaboration", level: 90, tag: "Scrum" }
   ]
 };
 
 export const WORK_EXPERIENCE = [
   {
-    role: "AI Engineer",
+    role: "Software Engineer & Full Stack Developer",
     company: "IT KUMAIL",
-    period: "Jan 2026 – Present",
-    description: "Specializing in AI Engineering and autonomous agentic systems (AIA). Building multi-agent pipelines with CrewAI & LangChain, deploying custom LLM-powered tools, constructing RAG systems over private knowledge bases, and orchestrating end-to-end business automations using n8n, Make.com, and Flowise.",
-    tech: ["LangChain", "CrewAI", "Flowise", "n8n", "Make.com", "Gemini API", "OpenAI", "Python", "LlamaIndex", "VectorDBs"]
+    location: "Lahore, Punjab",
+    period: "Jul 2025 – Present",
+    type: "Full-Time",
+    highlights: [
+      "Design, develop, and maintain efficient, high-quality, reusable code in Python, TypeScript, and Node.js, applying clean architecture principles (layered services, repositories, DTOs) for long-term maintainability.",
+      "Build high-performance RESTful APIs using FastAPI and Express, with JWT/OAuth authentication, complex business logic, and asynchronous workflows across multiple SaaS products.",
+      "Developed and integrated FastAPI-based services within the company's CRM system, building data-processing endpoints and connecting CRM backend logic with the broader SaaS ecosystem.",
+      "Containerized services with Docker writing Dockerfiles and Docker Compose configurations and deployed to Vercel/Cloudflare, ensuring consistent, reliable environments across development and production.",
+      "Benchmark and continuously optimize backend and API response performance through real-time server health monitoring, load testing, and query optimization on PostgreSQL, translating results into concrete engineering improvements.",
+      "Evaluate and document trade-offs between competing technical approaches (schema design, caching strategy, concurrency handling), producing clear written rationale for architectural decisions shared with the team.",
+      "Integrate automated payment systems (Stripe & PayPal), managing subscription lifecycles, webhooks, retry logic, and secure transaction flows."
+    ],
+    tech: ["Python", "FastAPI", "Docker", "Node.js", "TypeScript", "PostgreSQL", "Redis", "Stripe", "PayPal", "Vercel", "Cloudflare"]
   },
   {
-    role: "Full-Stack & AI Automation Engineer",
+    role: "WordPress & Front-End Developer",
     company: "IT KUMAIL",
-    period: "July 2025 – Dec 2025",
-    description: "Architected scalable backend services and autonomous AI agentic workflows. Designed RAG pipelines, deployed custom AI assistants with LangChain, and orchestrated workflow automations in n8n. Integrated OpenAI & Gemini API to power production-grade applications.",
-    tech: ["TypeScript", "Node.js", "NestJS", "PostgreSQL", "OpenAI", "n8n", "Docker"]
+    location: "Lahore, Punjab",
+    period: "Jul 2025 – March 2026",
+    type: "Full-Time",
+    highlights: [
+      "Developed interactive UI components using React.js and GSAP, and integrated an AI-powered chatbot to automate visitor query handling gaining direct exposure to deploying and refining AI-driven product features.",
+      "Diagnosed and resolved bugs, security vulnerabilities, and performance issues through systematic root-cause analysis across live web applications, including query optimization and caching (Redis).",
+      "Customized back-end logic and integrated third-party APIs to extend application functionality, ensuring readable and maintainable code across the stack.",
+      "Optimized large-scale applications for Core Web Vitals, achieving high Lighthouse scores through advanced caching, lazy loading, and render-blocking resolution."
+    ],
+    tech: ["React.js", "GSAP", "PHP", "WordPress", "Redis", "Core Web Vitals", "AI Chatbot", "REST APIs"]
   },
   {
-    role: "WordPress & Systems Developer",
-    company: "IT KUMAIL",
-    period: "July 2025 – Present",
-    description: "Optimizing web applications for Core Web Vitals and Lighthouse scores. Customizing PHP backend logic and integrating CRM tools. Building interactive UI components with React.js and GSAP.",
-    tech: ["React.js", "PHP", "WordPress", "GSAP", "Lighthouse", "CRM Tools"]
+    role: "Freelance Web Developer",
+    company: "Upwork",
+    location: "Remote",
+    period: "Feb 2025 – Jul 2025",
+    type: "Freelance",
+    highlights: [
+      "Delivered multiple client projects spanning JavaScript/TypeScript web application development, RESTful API integrations, and custom React front-ends for international clients.",
+      "Implemented responsive layouts, state management architectures, and high-converting checkout and lead generation workflows."
+    ],
+    tech: ["React.js", "JavaScript", "TypeScript", "Node.js", "REST APIs", "Tailwind CSS", "Next.js"]
   }
 ];
 
-export const JOURNEY = [
-  { year: "2026", event: "Full-Stack Development @ IT KUMAIL" },
-  { year: "2025", event: "WordPress & Systems Engineer @ IT KUMAIL" },
-  { year: "2023", event: "Started BS Software Engineering" },
-  { year: "2022", event: "Started WordPress Development" }
-
-];
-
-export const SERVICES = [
-  "Scalable Backend Architecture (Node/TS)",
-  "AI Engineering & Agentic Workflows (AIA)",
-  "AI Integration, RAG & LLM Pipelines",
-  "Automated Workflows (n8n, LangChain, Flowise)",
-  "High-Performance Web Applications"
-];
-
-export const TECH_STACK = [
-  "TypeScript", "Node.js", "React", "Flutter", "PostgreSQL", "OpenAI", "Gemini API", "n8n", "LangChain", "Flowise", "CrewAI", "Make.com", "LlamaIndex", "VectorDBs", "NestJS", "Next.js", "Docker", "Python", "Stripe", "GSAP"
+export const EDUCATION = [
+  {
+    degree: "Bachelor of Science in Software Engineering",
+    institution: "PMAS Arid Agriculture University",
+    location: "Lahore, Punjab",
+    period: "Oct 2023 – Present",
+    status: "In Progress",
+    description: "Focusing on Software Architecture, Distributed Systems, Data Structures, Relational Database Engineering, and Modern Web Engineering paradigms."
+  },
+  {
+    degree: "Intermediate in Computer Science (ICS)",
+    institution: "Superior College",
+    location: "Piplan, Punjab",
+    period: "Sep 2021 – Jun 2023",
+    status: "Completed",
+    description: "Built fundamental foundations in Computer Science, Object-Oriented Programming, C++, Boolean Logic, and Mathematical Problem Solving."
+  }
 ];
 
 export const PROJECTS = [
   {
-    title: "To The Web Pro",
-    tech: ["React.js", "Tailwind CSS", "SEO Suite", "API Integration","MongoDB", "JS Backend", "Recharts", "Redux Toolkit", "GSAP", "Framer Motion", "Sass", "SEO Suite", "Recharts"],
-    description: "A comprehensive SEO utilities and web developer tools platform. Features optimized analysis utilities, speed test tools, and custom workflow aids. Accessible at tothewebpro.com.",
-    image: "/tothewebpro.png",
-    demoLink: "https://tothewebpro.com/",
-    githubLink: "https://github.com/AhmadFaseeh"
-  },
-  {
-    title: "Cerahi Surgical",
-    tech: ["Next.js", "Tailwind CSS","TypeScript","MongoDB", "JS Backend", "Sass", "SEO Suite", "Recharts", "Redux Toolkit", "GSAP"],
-    description: "A high-end, responsive online catalog and business platform for a premium surgical instruments manufacturer. Features advanced searching, product sorting, and modern UX design. Accessible at cerahi.com.",
-    image: "/cerahi_surgical.png",
-    demoLink: "https://cerahi.com/",
-    githubLink: "https://github.com/AhmadFaseeh"
-  },
-  {
-    title: "Cerahi TSG",
-    tech: ["React.js", "Tailwind CSS", "Stripe", "E-Commerce", "Framer Motion", "GSAP", "React Router", "Recharts", "Redux Toolkit", "Sass"],
-    description: "A dynamic sports wear and apparel showcase platform. Features modern animations, fluid layout designs, cart workflows, and interactive brand components. Accessible at cerahitsg.com.",
-    image: "/cerahi_tsg.png",
-    demoLink: "https://cerahitsg.com/",
-    githubLink: "https://github.com/AhmadFaseeh"
-  },
-  {
+    id: "ai-agentic-saas",
     title: "AI-Driven Agentic SaaS Ecosystem",
-    tech: ["n8n", "OpenAI", "LangChain", "Node.js", "MongoDB", "RAG", "Vector DBs", "Shopify CRM", "CrewAI", "Gemini API", "LlamaIndex", "Typescript", "Express", "Python", "Flowise"],
-    description: "Comprehensive SaaS backend automating workflows with n8n and Gemini API. Features vector-based retrieval, LangChain agentic routing, and Shopify CRM integration.",
+    subtitle: "Autonomous Multi-Agent Workflow Engine & RAG Pipeline",
+    category: "AI & Backend Architecture",
+    featured: true,
+    tech: ["Python", "FastAPI", "Node.js", "TypeScript", "Express", "LangChain", "CrewAI", "RAG", "Vector DBs", "MongoDB", "n8n", "Gemini API", "OpenAI", "LlamaIndex", "Flowise"],
+    description: "A comprehensive SaaS backend in Python that automates enterprise workflows using n8n and the Gemini/OpenAI APIs, featuring LangChain and CrewAI-based agentic routing, Flowise orchestration, vector-based retrieval (RAG) with vector databases and LlamaIndex, integrated with MongoDB and a Shopify CRM connector for real-world business automation.",
+    metrics: ["Multi-agent routing", "Sub-second vector lookup", "Automated Shopify CRM sync"],
     image: "/project4.jpg",
     demoLink: "",
     githubLink: "https://github.com/AhmadFaseeh"
   },
   {
+    id: "cerahi-dentistry",
     title: "Cerahi Dentistry",
-    tech: ["Next.js", "Node.js", "PostgreSQL", "AI APIs", "MongoDB", "TypeScript", "API Integration", "Framer Motion", "Tailwind CSS"],
-    description: "Architected a tool for identifying and humanizing AI-generated text, utilizing a robust PostgreSQL backend and clean API layer.",
+    subtitle: "Precision Medical & Dental Catalog Platform",
+    category: "Full-Stack SaaS",
+    featured: true,
+    tech: ["Next.js", "Node.js", "TypeScript", "PostgreSQL", "REST API", "Tailwind CSS", "Docker"],
+    description: "Built a precision dental instruments catalog and business platform, listing and showcasing surgical and dental tools with a robust PostgreSQL backend, clean REST API layer, and high-performance server-side rendering.",
+    metrics: ["PostgreSQL indexing", "Fast SSR catalogue", "Production Docker container"],
     image: "/cerahi-dentistry.jpeg",
     demoLink: "https://cerahidentistry.com/",
     githubLink: "https://github.com/AhmadFaseeh"
+  },
+  {
+    id: "cerahi-surgical",
+    title: "Cerahi Surgical",
+    subtitle: "Enterprise Surgical Instruments Manufacturer Catalog",
+    category: "Next.js & Cloud Analytics",
+    featured: true,
+    tech: ["Next.js", "TypeScript", "Tailwind CSS", "MongoDB", "Redux Toolkit", "Recharts", "GSAP"],
+    description: "Built a high-end, responsive online catalog and business platform for a premium surgical instruments manufacturer, featuring advanced fuzzy search, recharts-driven analytics, and Redux Toolkit state management with fluid micro-interactions.",
+    metrics: ["1000+ SKU inventory", "Interactive analytics suite", "GSAP fluid micro-interactions"],
+    image: "/cerahi_surgical.png",
+    demoLink: "https://cerahi.com/",
+    githubLink: "https://github.com/AhmadFaseeh"
+  },
+  {
+    id: "tothewebpro",
+    title: "To The Web Pro",
+    subtitle: "SEO Analysis Suite & Web Developer Tools Engine",
+    category: "Full-Stack Web Utilities",
+    featured: false,
+    tech: ["React.js", "Tailwind CSS", "Node.js", "MongoDB", "SEO Suite", "GSAP", "Framer Motion"],
+    description: "A comprehensive SEO utilities and web developer tools platform featuring real-time meta tag checkers, speed test tools, lighthouse diagnostic aids, and custom developer workflow automations with an API-integrated Node.js/MongoDB backend.",
+    metrics: ["Core Web Vitals scoring", "Live Meta analyzer", "Instant API diagnostics"],
+    image: "/tothewebpro.png",
+    demoLink: "https://tothewebpro.com/",
+    githubLink: "https://github.com/AhmadFaseeh"
+  },
+  {
+    id: "cerahi-tsg",
+    title: "Cerahi TSG",
+    subtitle: "Sportswear & Apparel Dynamic E-Commerce Showcase",
+    category: "E-Commerce & Motion",
+    featured: false,
+    tech: ["React.js", "Tailwind CSS", "Stripe", "Redux Toolkit", "GSAP", "Framer Motion"],
+    description: "Developed a dynamic sportswear and apparel e-commerce showcase platform with Stripe-powered cart workflows, webhook verification, fluid GSAP/Framer Motion animations, and interactive brand storytelling.",
+    metrics: ["Stripe webhook checkout", "Stateful cart architecture", "Fluid 60fps animations"],
+    image: "/cerahi_tsg.png",
+    demoLink: "https://cerahitsg.com/",
+    githubLink: "https://github.com/AhmadFaseeh"
+  }
+];
+
+export const SERVICES = [
+  {
+    num: "01",
+    title: "Scalable Backend Architecture",
+    tagline: "Python (FastAPI), Node.js & NestJS",
+    description: "Engineering resilient, high-throughput microservices and RESTful/GraphQL APIs. Clean architecture with layered services, repository patterns, DTO validations, and sub-50ms query optimization.",
+    deliverables: ["FastAPI & Express RESTful APIs", "JWT / OAuth2 Secure Authentication", "Database Architecture & Query Profiling", "Stripe / PayPal Payment Workflows"]
+  },
+  {
+    num: "02",
+    title: "AI Engineering & Agentic Workflows",
+    tagline: "LangChain, CrewAI, RAG & LLMs",
+    description: "Building autonomous agentic pipelines, RAG systems over proprietary knowledge bases, vector search retrieval, and custom multi-agent routing using Gemini, OpenAI, and Flowise.",
+    deliverables: ["Autonomous Multi-Agent Routing", "RAG & VectorDB Search Engines", "n8n & Flowise Enterprise Automations", "Intelligent Customer Chatbots"]
+  },
+  {
+    num: "03",
+    title: "High-Performance Web & Full-Stack Apps",
+    tagline: "React.js, Next.js & TypeScript",
+    description: "Crafting hyper-fluid, responsive web applications with state-of-the-art UX, Redux state management, 3D WebGL Three.js elements, and buttery smooth GSAP animations.",
+    deliverables: ["Next.js SSR / App Router Platforms", "Interactive 3D / WebGL Three.js Experiences", "GSAP Smooth Motion & Micro-interactions", "95+ Lighthouse Score Optimization"]
+  },
+  {
+    num: "04",
+    title: "Dockerization & Cloud DevOps",
+    tagline: "Docker, Vercel, Cloudflare & Redis",
+    description: "Containerizing services with multi-stage Dockerfiles and Docker Compose. Configuring reliable deployment pipelines on Vercel and Cloudflare, with Redis in-memory caching for peak load handling.",
+    deliverables: ["Docker Compose Multi-Container Stacks", "Redis Query Caching & Rate Limiting", "CI/CD Pipeline Configurations", "Vercel & Cloudflare Edge Deployment"]
+  }
+];
+
+export const TECH_STACK = [
+  "Python", "FastAPI", "Docker", "Node.js", "TypeScript", "React", "Next.js", "PostgreSQL",
+  "MongoDB", "Redis", "LangChain", "CrewAI", "Gemini API", "OpenAI", "RAG", "Vector DBs",
+  "n8n", "GSAP", "Three.js", "Tailwind CSS", "Stripe", "GraphQL", "NestJS", "Git / GitHub"
+];
+
+export const RECOGNITIONS = [
+  {
+    title: "Outstanding Full-Stack & Backend Performance",
+    issuer: "IT KUMAIL Engineering Team",
+    date: "2025 – 2026",
+    badge: "VERIFIED EXCELLENCE",
+    note: "Recognized for architecting resilient FastAPI backend services and integrating AI automated agent pipelines."
+  },
+  {
+    title: "Agentic AI & Workflow Automation Specialist",
+    issuer: "Autonomous Systems Project",
+    date: "2026",
+    badge: "INNOVATION AWARD",
+    note: "Developed multi-agent routing engines and vector RAG pipelines with LlamaIndex and LangChain."
+  },
+  {
+    title: "Top Rated Freelance Delivery",
+    issuer: "Upwork International Clients",
+    date: "2025",
+    badge: "CLIENT APPRECIATION",
+    note: "Consistently delivered clean, responsive React & Node.js web applications with 100% positive feedback."
   }
 ];

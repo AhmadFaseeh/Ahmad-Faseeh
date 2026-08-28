@@ -1,10 +1,29 @@
 import { useEffect, useState } from 'react';
 
-export const SectionLabel = ({ text, className = "" }) => (
+export const SectionLabel = ({ text, number, className = "" }) => (
   <div className={`chapter-label ${className}`}>
-    <span className="dot-pair text-white">{text}</span>
+    {number && <span className="text-espresso-muted font-mono text-[10px]">[{number}]</span>}
+    <span className="text-bronze font-mono font-bold tracking-cyber text-[10px] md:text-xs">
+      // {text}
+    </span>
   </div>
 );
+
+export const StitchBadge = ({ children, variant = "default", className = "" }) => {
+  const styles = {
+    default: "bg-sand-card border-sand-border text-espresso-body hover:border-sand-border-dark font-medium shadow-sm",
+    cyan: "bg-sand-badge border-sand-border-dark text-espresso-dark font-bold hover:bg-sand-badge/80 shadow-sm",
+    violet: "bg-sand-medium border-sand-border text-espresso-dark hover:bg-sand-medium/80 font-semibold",
+    green: "bg-emerald-100/80 border-emerald-300 text-emerald-800 font-semibold",
+    dashed: "bg-sand-card border-dashed border-sand-border-dark text-espresso-body hover:border-bronze shadow-sm",
+  };
+
+  return (
+    <span className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-md text-[10px] font-mono uppercase tracking-widest border transition-all duration-300 ${styles[variant] || styles.default} ${className}`}>
+      {children}
+    </span>
+  );
+};
 
 export const Divider = () => (
   <div className="section-container !py-0">
@@ -13,46 +32,79 @@ export const Divider = () => (
 );
 
 export const CustomCursor = () => {
-  const [position, setPosition] = useState({ x: 0, y: 0 });
+  const [position, setPosition] = useState({ x: -100, y: -100 });
   const [isPointer, setIsPointer] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     const handleMouseMove = (e) => {
       setPosition({ x: e.clientX, y: e.clientY });
+      setIsVisible(true);
       const target = e.target;
-      setIsPointer(window.getComputedStyle(target).cursor === 'pointer');
+      if (target) {
+        const isClickable = 
+          target.tagName === 'A' || 
+          target.tagName === 'BUTTON' || 
+          target.closest('a') || 
+          target.closest('button') ||
+          window.getComputedStyle(target).cursor === 'pointer';
+        setIsPointer(isClickable);
+      }
     };
 
+    const handleMouseLeave = () => setIsVisible(false);
+
     window.addEventListener('mousemove', handleMouseMove);
-    return () => window.removeEventListener('mousemove', handleMouseMove);
+    document.addEventListener('mouseleave', handleMouseLeave);
+    return () => {
+      window.removeEventListener('mousemove', handleMouseMove);
+      document.removeEventListener('mouseleave', handleMouseLeave);
+    };
   }, []);
 
+  if (!isVisible) return null;
+
   return (
-    <>
+    <div className="hidden lg:block">
       <div 
         className="cursor-dot"
-        style={{ left: `${position.x}px`, top: `${position.y}px`, transform: 'translate(-50%, -50%)' }}
+        style={{ 
+          left: `${position.x}px`, 
+          top: `${position.y}px`,
+          transform: `translate(-50%, -50%) scale(${isPointer ? 1.5 : 1})`,
+        }}
       />
       <div 
         className="cursor-circle"
         style={{ 
           left: `${position.x}px`, 
           top: `${position.y}px`, 
-          transform: `translate(-50%, -50%) scale(${isPointer ? 1.5 : 1})`,
-          borderColor: isPointer ? '#fff' : 'rgba(255,255,255,0.3)'
+          transform: `translate(-50%, -50%) scale(${isPointer ? 1.6 : 1})`,
+          borderColor: isPointer ? '#A75D2B' : 'rgba(167, 93, 43, 0.4)',
+          backgroundColor: isPointer ? 'rgba(167, 93, 43, 0.08)' : 'transparent'
         }}
       />
-    </>
+    </div>
   );
 };
 
-export const BrowserMockup = ({ children, className = "" }) => (
+export const BrowserMockup = ({ children, title = "SYS_RENDER_VIEW", className = "" }) => (
   <div className={`browser-mockup flex flex-col ${className}`}>
     <div className="browser-header">
-      <div className="dot-btn bg-red-500/50" />
-      <div className="dot-btn bg-yellow-500/50" />
-      <div className="dot-btn bg-green-500/50" />
-      <div className="ml-4 h-4 w-32 bg-zinc-800 rounded-full" />
+      <div className="flex items-center gap-2">
+        <div className="dot-btn bg-red-400" />
+        <div className="dot-btn bg-amber-400" />
+        <div className="dot-btn bg-emerald-400" />
+        <span className="ml-3 font-mono text-[9px] text-espresso-muted uppercase tracking-widest hidden sm:inline font-semibold">
+          {title}
+        </span>
+      </div>
+      <div className="flex items-center gap-2">
+        <span className="inline-block w-1.5 h-1.5 rounded-full bg-bronze animate-pulse" />
+        <span className="font-mono text-[9px] text-espresso-dark font-bold uppercase tracking-widest">
+          3D_ACTIVE
+        </span>
+      </div>
     </div>
     <div className="flex-1 relative w-full h-full min-h-0 overflow-hidden">
       {children}
