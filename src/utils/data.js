@@ -4,7 +4,6 @@ export const PERSONAL_INFO = {
   title: "Software Engineer Python / FastAPI · Docker · Full-Stack",
   role: "Software Engineer & Full-Stack Architect",
   location: "Lahore, Punjab, PK",
-  coordinates: "31.5204° N, 74.3587° E",
   email: "muhammadahmadfaseeh5@gmail.com",
   phone: "0320-6493816",
   resume: "/Muhammad_Ahmad_Fasih.pdf",
