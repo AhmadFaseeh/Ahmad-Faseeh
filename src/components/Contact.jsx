@@ -4,9 +4,9 @@ import confetti from 'canvas-confetti';
 import { SectionLabel, BrowserMockup, StitchBadge } from './Common';
 import { PERSONAL_INFO } from '../utils/data';
 import emailjs from '@emailjs/browser';
-const EMAILJS_SERVICE_ID  = import.meta.env.VITE_EMAILJS_SERVICE_ID || 'service_portfolio';
+const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID || 'service_portfolio';
 const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || 'template_portfolio';
-const EMAILJS_PUBLIC_KEY  = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || 'user_portfolio';
+const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || 'user_portfolio';
 const Contact = () => {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -35,17 +35,17 @@ const Contact = () => {
           EMAILJS_SERVICE_ID,
           EMAILJS_TEMPLATE_ID,
           {
-            from_name:  formData.name,
+            from_name: formData.name,
             from_email: formData.email,
-            message:    formData.message,
-            reply_to:   formData.email,
+            message: formData.message,
+            reply_to: formData.email,
           },
           EMAILJS_PUBLIC_KEY
         );
       } else {
         await new Promise(resolve => setTimeout(resolve, 800));
       }
-      
+
       setIsSubmitted(true);
       triggerConfetti();
       setFormData({ name: '', email: '', message: '' });
@@ -60,7 +60,7 @@ const Contact = () => {
     <section id="contact" className="section-container relative pt-32 pb-20 bg-sand-medium/30">
       <SectionLabel text="GET IN TOUCH // 08" className="mb-8" />
       <div className="text-center mb-16 relative">
-        <motion.h2 
+        <motion.h2
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8 }}
@@ -73,9 +73,9 @@ const Contact = () => {
         </p>
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start mb-20">
-        
+
         <div className="lg:col-span-5 space-y-6">
-          
+
           <div className="p-8 rounded-2xl bg-sand-card border border-sand-border shadow-sm space-y-6">
             <div className="flex items-center justify-between pb-4 border-b border-sand-border">
               <span className="font-mono text-xs uppercase tracking-widest text-espresso-dark font-bold">
@@ -87,8 +87,8 @@ const Contact = () => {
               <span className="text-[10px] font-mono uppercase tracking-widest text-espresso-muted block font-semibold">
                 Primary Email
               </span>
-              <a 
-                href={`mailto:${PERSONAL_INFO.email}`} 
+              <a
+                href={`mailto:${PERSONAL_INFO.email}`}
                 className="text-espresso-dark font-mono text-sm md:text-base font-semibold hover:text-bronze transition-colors break-all flex items-center gap-2"
               >
                 <span>{PERSONAL_INFO.email}</span>
@@ -99,8 +99,8 @@ const Contact = () => {
               <span className="text-[10px] font-mono uppercase tracking-widest text-espresso-muted block font-semibold">
                 Phone / WhatsApp
               </span>
-              <a 
-                href={`tel:${PERSONAL_INFO.phone}`} 
+              <a
+                href={`tel:${PERSONAL_INFO.phone}`}
                 className="text-espresso-dark font-mono text-sm md:text-base font-semibold hover:text-bronze transition-colors flex items-center gap-2"
               >
                 <span>+92 320 6493816</span>
@@ -112,35 +112,35 @@ const Contact = () => {
                 Location & Coordinates
               </span>
               <p className="text-espresso-body font-mono text-sm font-medium">
-                {PERSONAL_INFO.location} <span className="text-espresso-muted">({PERSONAL_INFO.coordinates})</span>
+                {PERSONAL_INFO.location}
               </p>
             </div>
             <div className="pt-4 border-t border-sand-border/60">
-              <a 
-                href="/Muhammad_Ahmad_Fasih.pdf" 
+              <a
+                href="/Muhammad_Ahmad_Fasih.pdf"
                 download="Muhammad_Ahmad_Fasih.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full py-3 px-3 rounded-lg bg-sand-medium border border-sand-border hover:border-bronze text-espresso-dark font-mono text-[10px] sm:text-xs uppercase tracking-normal sm:tracking-widest flex items-center justify-center gap-2 hover:bg-sand-badge/60 transition-all font-bold group shadow-sm cursor-pointer whitespace-nowrap"
+                className="w-full py-3 rounded-lg bg-sand-medium border border-sand-border hover:border-bronze text-espresso-dark font-mono text-xs uppercase tracking-widest flex items-center justify-center gap-2 hover:bg-sand-badge/60 transition-all font-bold group shadow-sm cursor-pointer"
               >
                 <span>Download Curriculum Vitae (PDF)</span>
-                <span className="text-bronze group-hover:translate-y-0.5 transition-transform font-bold shrink-0">↓</span>
+                <span className="text-bronze group-hover:translate-y-0.5 transition-transform font-bold">↓</span>
               </a>
             </div>
           </div>
           <div className="grid grid-cols-2 gap-4">
-            <a 
-              href={PERSONAL_INFO.linkedin} 
-              target="_blank" 
+            <a
+              href={PERSONAL_INFO.linkedin}
+              target="_blank"
               rel="noreferrer"
               className="p-4 rounded-xl bg-sand-card border border-sand-border hover:border-bronze text-espresso-dark font-mono text-xs uppercase tracking-widest flex items-center justify-between group transition-all font-bold shadow-sm"
             >
               <span>LinkedIn</span>
               <span className="text-bronze group-hover:translate-x-1 transition-transform font-bold">↗</span>
             </a>
-            <a 
-              href={PERSONAL_INFO.github} 
-              target="_blank" 
+            <a
+              href={PERSONAL_INFO.github}
+              target="_blank"
               rel="noreferrer"
               className="p-4 rounded-xl bg-sand-card border border-sand-border hover:border-bronze text-espresso-dark font-mono text-xs uppercase tracking-widest flex items-center justify-between group transition-all font-bold shadow-sm"
             >
@@ -153,7 +153,7 @@ const Contact = () => {
           <BrowserMockup title="TERMINAL_MESSAGE_TRANSMISSION" className="w-full bg-sand-card border-sand-border">
             <AnimatePresence mode="wait">
               {isSubmitted ? (
-                <motion.div 
+                <motion.div
                   key="success"
                   initial={{ opacity: 0, scale: 0.95 }}
                   animate={{ opacity: 1, scale: 1 }}
@@ -177,7 +177,7 @@ const Contact = () => {
                   </button>
                 </motion.div>
               ) : (
-                <motion.div 
+                <motion.div
                   key="form"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
@@ -192,9 +192,9 @@ const Contact = () => {
                       <label className="block text-[10px] font-mono uppercase tracking-widest text-espresso-muted mb-1.5 font-bold">
                         Your Full Name *
                       </label>
-                      <input 
-                        type="text"   
-                        placeholder="Full Name" 
+                      <input
+                        type="text"
+                        placeholder="Full Name"
                         required
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
@@ -205,9 +205,9 @@ const Contact = () => {
                       <label className="block text-[10px] font-mono uppercase tracking-widest text-espresso-muted mb-1.5 font-bold">
                         Your Email Address *
                       </label>
-                      <input 
-                        type="email" 
-                        placeholder="Email Address" 
+                      <input
+                        type="email"
+                        placeholder="Email Address"
                         required
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
@@ -218,8 +218,8 @@ const Contact = () => {
                       <label className="block text-[10px] font-mono uppercase tracking-widest text-espresso-muted mb-1.5 font-bold">
                         Your Message
                       </label>
-                      <textarea 
-                        placeholder="Describe your project, role opportunity, or architectural requirements..." 
+                      <textarea
+                        placeholder="Describe your project, role opportunity, or architectural requirements..."
                         required
                         rows={4}
                         value={formData.message}
