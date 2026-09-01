@@ -147,43 +147,43 @@ export const EDUCATION = [
 
 export const PROJECTS = [
   {
-    id: "ai-agentic-saas",
-    title: "AI-Driven Agentic SaaS Ecosystem",
-    subtitle: "Autonomous Multi-Agent Workflow Engine & RAG Pipeline",
-    category: "AI & Backend Architecture",
+    id: "cerahi-crm",
+    title: "Cerahi Industries CRM",
+    subtitle: "Enterprise CRM Dashboard & Business Operations Platform",
+    category: "Full-Stack CRM",
     featured: true,
-    tech: ["Python", "FastAPI", "Node.js", "TypeScript", "Express", "LangChain", "CrewAI", "RAG", "Vector DBs", "MongoDB", "n8n", "Gemini API", "OpenAI", "LlamaIndex", "Flowise"],
-    description: "A comprehensive SaaS backend in Python that automates enterprise workflows using n8n and the Gemini/OpenAI APIs, featuring LangChain and CrewAI-based agentic routing, Flowise orchestration, vector-based retrieval (RAG) with vector databases and LlamaIndex, integrated with MongoDB and a Shopify CRM connector for real-world business automation.",
-    metrics: ["Multi-agent routing", "Sub-second vector lookup", "Automated Shopify CRM sync"],
-    image: "/project4.jpg",
+    tech: ["React.js", "FastAPI", "Python", "PostgreSQL", "Docker", "REST API", "TypeScript", "Tailwind CSS"],
+    description: "Developed and integrated a full-featured enterprise CRM system for Cerahi Industries, featuring real-time order management, invoice tracking, lead management, inventory control, accounting modules, and an interactive analytics dashboard with live business metrics.",
+    metrics: ["Real-time order tracking", "Multi-module ERP integration", "294+ invoices managed"],
+    image: "/cerahi_crm.png",
     demoLink: "",
-    githubLink: "https://github.com/AhmadFaseeh"
+    githubLink: "https://github.com/AhmadIntern"
   },
   {
     id: "cerahi-dentistry",
     title: "Cerahi Dentistry",
     subtitle: "Precision Medical & Dental Catalog Platform",
-    category: "Full-Stack SaaS",
-    featured: true,
+    category: "Front-end Web Application",
+    featured: false,
     tech: ["Next.js", "Node.js", "TypeScript", "PostgreSQL", "REST API", "Tailwind CSS", "Docker"],
     description: "Built a precision dental instruments catalog and business platform, listing and showcasing surgical and dental tools with a robust PostgreSQL backend, clean REST API layer, and high-performance server-side rendering.",
     metrics: ["PostgreSQL indexing", "Fast SSR catalogue", "Production Docker container"],
     image: "/cerahi-dentistry.jpeg",
     demoLink: "https://cerahidentistry.com/",
-    githubLink: "https://github.com/AhmadFaseeh"
+    githubLink: "https://github.com/AhmadIntern"
   },
   {
     id: "cerahi-surgical",
     title: "Cerahi Surgical",
     subtitle: "Enterprise Surgical Instruments Manufacturer Catalog",
     category: "Next.js & Cloud Analytics",
-    featured: true,
+    featured: false,
     tech: ["Next.js", "TypeScript", "Tailwind CSS", "MongoDB", "Redux Toolkit", "Recharts", "GSAP"],
     description: "Built a high-end, responsive online catalog and business platform for a premium surgical instruments manufacturer, featuring advanced fuzzy search, recharts-driven analytics, and Redux Toolkit state management with fluid micro-interactions.",
     metrics: ["1000+ SKU inventory", "Interactive analytics suite", "GSAP fluid micro-interactions"],
     image: "/cerahi_surgical.png",
     demoLink: "https://cerahi.com/",
-    githubLink: "https://github.com/AhmadFaseeh"
+    githubLink: "https://github.com/AhmadIntern"
   },
   {
     id: "tothewebpro",
@@ -202,7 +202,7 @@ export const PROJECTS = [
     id: "cerahi-tsg",
     title: "Cerahi TSG",
     subtitle: "Sportswear & Apparel Dynamic E-Commerce Showcase",
-    category: "E-Commerce & Motion",
+    category: "E-Commerce",
     featured: false,
     tech: ["React.js", "Tailwind CSS", "Stripe", "Redux Toolkit", "GSAP", "Framer Motion"],
     description: "Developed a dynamic sportswear and apparel e-commerce showcase platform with Stripe-powered cart workflows, webhook verification, fluid GSAP/Framer Motion animations, and interactive brand storytelling.",
@@ -210,6 +210,82 @@ export const PROJECTS = [
     image: "/cerahi_tsg.png",
     demoLink: "https://cerahitsg.com/",
     githubLink: "https://github.com/AhmadFaseeh"
+  },
+  {
+    id: "gofly-travel",
+    title: "GoFly Travel",
+    subtitle: "All-in-One Travel Booking & Discovery Platform",
+    category: "WordPress",
+    featured: false,
+    tech: ["WordPress", "ELEMENTOR", "PHP", "MySQL", "Stripe", "REST API", "SEO", "Custom Theme", "WooCommerce"],
+    description: "Developed a full-featured travel booking platform enabling users to search and book Tours, Flights, and Hotels with destination discovery, dynamic package pricing, and a clean mobile-first UI showcasing global destinations.",
+    metrics: ["Multi-category booking engine", "Dynamic tour packages", "Mobile-first responsive UI"],
+    image: "/gofly_travel.png",
+    demoLink: "https://goflytravel.com/",
+  },
+  {
+    id: "digital-marketing-emirates",
+    title: "Digital Marketing Emirates",
+    subtitle: "Top UAE Digital Marketing Agency Platform",
+    category: "WordPress",
+    featured: false,
+    tech: ["WordPress", "ELEMENTOR", "PHP", "MySQL", "SEO", "Custom Theme", "REST API"],
+    description: "Built a professional digital marketing agency website for the UAE market, featuring service showcases (SEO, PPC, Social Media), city-based landing pages, a portfolio section, and conversion-optimized lead generation workflows with high Lighthouse scores.",
+    metrics: ["Multi-city landing pages", "Conversion-optimized flows", "95+ Lighthouse score"],
+    image: "/digital_marketing.jpg",
+    demoLink: "https://digitalmarketingemirates.com/",
+  },
+  {
+    id: "prime-swift-uae",
+    title: "Prime Swift UAE",
+    subtitle: "Insulation Contractors UAE — Lead Generation & Services Platform",
+    category: "WordPress",
+    featured: false,
+    tech: ["WordPress", "Elementor", "PHP", "MySQL", "SEO", "Custom Theme", "Contact Form 7", "Core Web Vitals"],
+    description: "Built a professional lead-generation website for Prime Swift Insulation Contracting LLC in Dubai UAE, featuring service showcases, an instant quote form, SEO-optimized service pages, and a mobile-first layout designed to convert B2B and B2C insulation clients.",
+    metrics: ["Lead-gen quote form", "SEO-optimized service pages", "Mobile-first UAE market"],
+    image: "/prime_swift_uae.png",
+    demoLink: "https://primeswiftuae.com/",
+    githubLink: ""
+  },
+  {
+    id: "cherry-blossom-festival",
+    title: "National Cherry Blossom Festival",
+    subtitle: "Washington DC's Longest-Running Cultural Festival Platform",
+    category: "WordPress",
+    featured: false,
+    tech: ["WordPress", "Elementor", "PHP", "MySQL", "SEO", "Custom Theme", "WooCommerce", "Events Manager"],
+    description: "Developed and maintained the official website for Washington DC's iconic National Cherry Blossom Festival, featuring event listings, Bloom Watch, community programs, sponsor showcases, a store, and multi-page visitor planning guides for an international audience.",
+    metrics: ["Multi-page event platform", "Bloom Watch integration", "International audience reach"],
+    image: "/cherry_blossom.png",
+    demoLink: "https://nationalcherryblossomfestival.org/",
+    githubLink: ""
+  },
+  {
+    id: "luxury-trips",
+    title: "The Luxury Trips",
+    subtitle: "All-in-One Travel Booking & Tour Discovery Platform",
+    category: "WordPress",
+    featured: false,
+    tech: ["WordPress", "Elementor", "PHP", "MySQL", "WooCommerce", "REST API", "SEO", "Custom Theme"],
+    description: "Developed a comprehensive travel booking platform featuring Tours, Hotels, Visa, and Experience categories with destination search, custom itinerary builder, WhatsApp support integration, and a mobile-optimized UI for global travel agencies.",
+    metrics: ["Multi-category booking engine", "Custom itinerary builder", "WhatsApp CTA integration"],
+    image: "/luxury_trips.png",
+    demoLink: "https://theluxurytrips.co.uk/",
+    githubLink: ""
+  },
+  {
+    id: "good-flights",
+    title: "Good Flights UK",
+    subtitle: "Cheap Flights Booking Platform — UK Aviation Market",
+    category: "WordPress",
+    featured: false,
+    tech: ["WordPress", "Elementor", "PHP", "MySQL", "SEO", "Custom Theme", "Flights API", "Core Web Vitals"],
+    description: "Built a UK-focused flight booking platform for Good Flights, featuring One Way and Return flight search, holiday packages, transparent pricing, and a trust-building design with 5k+ real traveler reviews — optimized for high conversion in the competitive UK aviation market.",
+    metrics: ["One-way & return search", "5k+ traveler trust signals", "High-conversion UK market"],
+    image: "/good_flights.png",
+    demoLink: "https://goodflights.co.uk/",
+    githubLink: ""
   }
 ];
 
@@ -231,7 +307,7 @@ export const SERVICES = [
   {
     num: "03",
     title: "High-Performance Web & Full-Stack Apps",
-    tagline: "React.js, Next.js & TypeScript",
+    tagline: "React.js, Next.js & TypeScript ",
     description: "Crafting hyper-fluid, responsive web applications with state-of-the-art UX, Redux state management, 3D WebGL Three.js elements, and buttery smooth GSAP animations.",
     deliverables: ["Next.js SSR / App Router Platforms", "Interactive 3D / WebGL Three.js Experiences", "GSAP Smooth Motion & Micro-interactions", "95+ Lighthouse Score Optimization"]
   },
@@ -243,13 +319,11 @@ export const SERVICES = [
     deliverables: ["Docker Compose Multi-Container Stacks", "Redis Query Caching & Rate Limiting", "CI/CD Pipeline Configurations", "Vercel & Cloudflare Edge Deployment"]
   }
 ];
-
 export const TECH_STACK = [
   "Python", "FastAPI", "Docker", "Node.js", "TypeScript", "React", "Next.js", "PostgreSQL",
   "MongoDB", "Redis", "LangChain", "CrewAI", "Gemini API", "OpenAI", "RAG", "Vector DBs",
   "n8n", "GSAP", "Three.js", "Tailwind CSS", "Stripe", "GraphQL", "NestJS", "Git / GitHub"
 ];
-
 export const RECOGNITIONS = [
   {
     title: "Outstanding Full-Stack & Backend Performance",

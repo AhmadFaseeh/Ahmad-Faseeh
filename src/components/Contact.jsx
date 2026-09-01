@@ -5,11 +5,9 @@ import { SectionLabel, BrowserMockup, StitchBadge } from './Common';
 import { PERSONAL_INFO } from '../utils/data';
 import emailjs from '@emailjs/browser';
 
-// ─── EmailJS Config ───────────────────────────────────────────────
 const EMAILJS_SERVICE_ID  = import.meta.env.VITE_EMAILJS_SERVICE_ID || 'service_portfolio';
 const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || 'template_portfolio';
 const EMAILJS_PUBLIC_KEY  = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || 'user_portfolio';
-// ──────────────────────────────────────────────────────────────────
 
 const Contact = () => {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
@@ -67,8 +65,6 @@ const Contact = () => {
   return (
     <section id="contact" className="section-container relative pt-32 pb-20 bg-sand-medium/30">
       <SectionLabel text="GET IN TOUCH // 08" className="mb-8" />
-
-      {/* Background Watermark */}
       <div className="text-center mb-16 relative">
         <motion.h2 
           initial={{ opacity: 0, scale: 0.95 }}
@@ -82,10 +78,8 @@ const Contact = () => {
           Have an engineering opening, a high-throughput backend to scale, or an AI agent to build? Let's connect.
         </p>
       </div>
-
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start mb-20">
         
-        {/* Left Side: Direct Contact Details & Quick Channels (Col 5) */}
         <div className="lg:col-span-5 space-y-6">
           
           <div className="p-8 rounded-2xl bg-sand-card border border-sand-border shadow-sm space-y-6">
@@ -95,8 +89,6 @@ const Contact = () => {
               </span>
               <StitchBadge variant="green">Online</StitchBadge>
             </div>
-
-            {/* Email */}
             <div className="space-y-1">
               <span className="text-[10px] font-mono uppercase tracking-widest text-espresso-muted block font-semibold">
                 Primary Email
@@ -109,8 +101,6 @@ const Contact = () => {
                 <span className="text-bronze text-xs font-bold">↗</span>
               </a>
             </div>
-
-            {/* Phone / WhatsApp */}
             <div className="space-y-1">
               <span className="text-[10px] font-mono uppercase tracking-widest text-espresso-muted block font-semibold">
                 Phone / WhatsApp
@@ -123,8 +113,6 @@ const Contact = () => {
                 <span className="text-bronze text-xs font-bold">↗</span>
               </a>
             </div>
-
-            {/* Location */}
             <div className="space-y-1">
               <span className="text-[10px] font-mono uppercase tracking-widest text-espresso-muted block font-semibold">
                 Location & Coordinates
@@ -133,8 +121,6 @@ const Contact = () => {
                 {PERSONAL_INFO.location} <span className="text-espresso-muted">({PERSONAL_INFO.coordinates})</span>
               </p>
             </div>
-
-            {/* CV Download CTA */}
             <div className="pt-4 border-t border-sand-border/60">
               <a 
                 href="/Muhammad_Ahmad_Fasih.pdf" 
@@ -148,8 +134,6 @@ const Contact = () => {
               </a>
             </div>
           </div>
-
-          {/* Social Links Matrix */}
           <div className="grid grid-cols-2 gap-4">
             <a 
               href={PERSONAL_INFO.linkedin} 
@@ -170,10 +154,7 @@ const Contact = () => {
               <span className="text-bronze group-hover:translate-x-1 transition-transform font-bold">↗</span>
             </a>
           </div>
-
         </div>
-
-        {/* Right Side: Interactive Terminal Contact Form (Col 7) */}
         <div className="lg:col-span-7">
           <BrowserMockup title="TERMINAL_MESSAGE_TRANSMISSION" className="w-full bg-sand-card border-sand-border">
             <AnimatePresence mode="wait">

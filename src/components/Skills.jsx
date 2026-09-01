@@ -114,23 +114,6 @@ const Skills = () => {
           ))}
         </AnimatePresence>
       </motion.div>
-
-      {/* Highlights Banner */}
-      <div className="mt-12 p-6 rounded-2xl bg-white border border-dashed border-[#B89F88] flex flex-col md:flex-row justify-between items-center gap-6 text-xs font-mono text-[#382618] font-semibold shadow-sm">
-        <div className="flex items-center gap-3">
-          <span className="text-[#A75D2B] text-base font-bold">⚙</span>
-          <span>FastAPI Backend Services with sub-50ms latency & robust Pydantic validation.</span>
-        </div>
-        <div className="flex items-center gap-3">
-          <span className="text-[#231709] text-base font-bold">✦</span>
-          <span>Autonomous AI Agentic Routing & Vector RAG with LangChain & CrewAI.</span>
-        </div>
-        <div className="flex items-center gap-3">
-          <span className="text-emerald-800 text-base font-bold">✓</span>
-          <span>Docker Compose environments deployed with 99.9% uptime.</span>
-        </div>
-      </div>
-
     </section>
   );
 };

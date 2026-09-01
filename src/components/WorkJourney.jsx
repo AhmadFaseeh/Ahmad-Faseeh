@@ -16,9 +16,6 @@ const WorkJourney = () => {
             WORK EXPERIENCE & <br/>
             <span className="text-bronze">EDUCATION</span>
           </h2>
-          <p className="text-espresso-body text-sm md:text-base font-sans mt-3 max-w-xl font-medium">
-            A chronological trajectory of software engineering roles, full-stack deliveries, and academic foundations.
-          </p>
         </div>
 
         <div className="flex items-center gap-3">
@@ -56,16 +53,13 @@ const WorkJourney = () => {
                   }`}
                 >
                   <div 
-                    className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 cursor-pointer select-none"
+                    className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 cursor-pointer select-none"
                     onClick={() => setExpandedIndex(isExpanded ? -1 : index)}
                   >
                     <div>
-                      <div className="flex items-center gap-2 mb-1">
-                        <span className="text-espresso-dark font-mono text-base font-bold">
+                      <div className="flex items-center gap-2 mb-1 flex-wrap">
+                        <span className="text-espresso-dark font-mono text-sm md:text-base font-bold">
                           {work.role}
-                        </span>
-                        <span className="px-2 py-0.5 rounded text-[9px] font-mono uppercase tracking-widest bg-sand-badge text-espresso-dark font-bold border border-sand-border-dark">
-                          {work.type}
                         </span>
                       </div>
                       <p className="text-espresso-body font-mono text-xs">
@@ -73,11 +67,14 @@ const WorkJourney = () => {
                       </p>
                     </div>
 
-                    <div className="flex items-center gap-3">
-                      <span className="text-xs font-mono text-espresso-body bg-sand-medium px-3 py-1 rounded-md border border-sand-border font-medium">
+                    <div className="flex items-center gap-2 sm:gap-3 shrink-0">
+                      <span className="px-2 py-0.5 rounded text-[9px] font-mono uppercase tracking-widest bg-sand-badge text-espresso-dark font-bold border border-sand-border-dark whitespace-nowrap">
+                        {work.type}
+                      </span>
+                      <span className="text-xs font-mono text-espresso-body bg-sand-medium px-3 py-1 rounded-md border border-sand-border font-medium whitespace-nowrap">
                         {work.period}
                       </span>
-                      <button className="text-bronze font-mono text-xs p-1 font-bold">
+                      <button className="text-bronze font-mono text-xs p-1 font-bold shrink-0">
                         {isExpanded ? '▲' : '▼'}
                       </button>
                     </div>
@@ -121,17 +118,13 @@ const WorkJourney = () => {
             })}
           </div>
         </div>
-
-        {/* Right Column: Academic Education (Col 5) */}
         <div className="lg:col-span-5 space-y-6">
           <div className="flex items-center justify-between pb-3 border-b border-sand-border">
             <h3 className="font-mono text-xs uppercase tracking-widest text-espresso-dark font-bold flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-caramel" />
               Academic Background
             </h3>
-            <span className="font-mono text-[10px] text-espresso-muted font-semibold">DEGREE & HIGHER SECONDARY</span>
           </div>
-
           <div className="space-y-6">
             {EDUCATION.map((edu, idx) => (
               <motion.div
@@ -150,31 +143,17 @@ const WorkJourney = () => {
                     {edu.period}
                   </span>
                 </div>
-
                 <h4 className="text-espresso-dark font-mono text-base font-bold mb-1 group-hover:text-bronze transition-colors">
                   {edu.degree}
                 </h4>
-
                 <p className="text-espresso-body font-mono text-xs mb-4">
                   {edu.institution} · <span className="text-espresso-muted">{edu.location}</span>
                 </p>
-
                 <p className="text-espresso-body text-xs leading-relaxed font-sans border-l-2 border-sand-border pl-3">
                   {edu.description}
                 </p>
               </motion.div>
             ))}
-
-            {/* Tactical Code Commitment Card */}
-            <div className="p-6 rounded-2xl bg-sand-card border border-dashed border-sand-border-dark text-xs font-mono shadow-sm">
-              <div className="flex items-center gap-2 text-bronze mb-2">
-                <span>⚡</span>
-                <span className="font-bold">CONTINUOUS LEARNING</span>
-              </div>
-              <p className="text-espresso-body leading-relaxed font-sans text-xs">
-                Actively expanding expertise in Autonomous AI agents (LangChain, CrewAI), Distributed Systems, and Microservices containerization.
-              </p>
-            </div>
           </div>
         </div>
 

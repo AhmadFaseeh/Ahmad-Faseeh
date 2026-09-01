@@ -10,7 +10,6 @@ const RecognitionCard = ({ title, issuer, date, badge, note, index }) => (
     viewport={{ once: true }}
     className="p-8 rounded-2xl bg-sand-card border border-sand-border hover:border-bronze shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between group relative overflow-hidden"
   >
-    {/* Corner Glow Accent */}
     <div className="absolute -top-12 -right-12 w-24 h-24 bg-amber-200/40 rounded-full blur-xl group-hover:bg-amber-300/50 transition-all" />
 
     <div>

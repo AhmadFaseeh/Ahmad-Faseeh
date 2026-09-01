@@ -57,28 +57,28 @@ const ProjectCard = ({ project, index }) => {
         </div>
         
         {/* Project Details */}
-        <div className="p-6 md:p-8 flex-1 flex flex-col justify-between bg-sand-card">
+        <div className="p-4 sm:p-6 md:p-8 flex-1 flex flex-col justify-between bg-sand-card">
           <div>
             <div className="flex items-center justify-between gap-2 mb-2">
-              <span className="text-[10px] font-mono uppercase tracking-widest text-bronze font-bold">
+              <span className="text-[9px] sm:text-[10px] font-mono uppercase tracking-widest text-bronze font-bold leading-tight">
                 {project.category}
               </span>
-              <span className="text-[9px] font-mono text-espresso-muted font-semibold">
-                PROJ_0{index + 1}
+              <span className="text-[9px] font-mono text-espresso-muted font-semibold shrink-0">
+                PROJ_{String(index + 1).padStart(2, '0')}
               </span>
             </div>
 
-            <h3 className="text-espresso-dark text-xl md:text-2xl font-mono font-bold mb-2 group-hover:text-bronze transition-colors">
+            <h3 className="text-espresso-dark text-lg sm:text-xl md:text-2xl font-mono font-bold mb-2 group-hover:text-bronze transition-colors leading-tight">
               {project.title}
             </h3>
 
-            <p className="text-espresso-body text-xs md:text-sm leading-relaxed mb-6 font-sans">
+            <p className="text-espresso-body text-xs md:text-sm leading-relaxed mb-4 font-sans">
               {project.description}
             </p>
 
             {/* Metrics Chips */}
             {project.metrics && (
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5 mb-4">
                 {project.metrics.map((metric, mIdx) => (
                   <div key={mIdx} className="px-2.5 py-1 rounded bg-sand-medium/60 border border-sand-border text-[9px] font-mono text-espresso-body flex items-center gap-1.5 font-medium">
                     <span className="text-bronze font-bold">✓</span>
@@ -89,9 +89,9 @@ const ProjectCard = ({ project, index }) => {
             )}
 
             {/* Tech Badges */}
-            <div className="flex flex-wrap gap-1.5 mb-6">
+            <div className="flex flex-wrap gap-1 sm:gap-1.5 mb-4">
               {project.tech.map((t) => (
-                <span key={t} className="px-2 py-0.5 rounded border border-sand-border text-[9px] font-mono uppercase text-espresso-body bg-sand-medium font-medium">
+                <span key={t} className="px-1.5 sm:px-2 py-0.5 rounded border border-sand-border text-[9px] font-mono uppercase text-espresso-body bg-sand-medium font-medium">
                   {t}
                 </span>
               ))}
@@ -99,21 +99,22 @@ const ProjectCard = ({ project, index }) => {
           </div>
           
           {/* Action Links */}
-          <div className="flex items-center justify-between pt-4 border-t border-sand-border">
+          <div className="flex items-center justify-between pt-3 border-t border-sand-border">
             <div className="flex items-center gap-4">
               {project.demoLink ? (
                 <a 
                   href={project.demoLink} 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className="text-xs font-mono uppercase tracking-widest text-espresso-dark hover:text-bronze font-bold flex items-center gap-1.5 transition-colors"
+                  className="text-[10px] sm:text-xs font-mono uppercase tracking-widest text-espresso-dark hover:text-bronze font-bold flex items-center gap-1.5 transition-colors"
                 >
                   <span>Live Demo</span>
                   <span>↗</span>
                 </a>
               ) : (
-                <span className="text-xs font-mono uppercase tracking-widest text-espresso-muted flex items-center gap-1">
-                  <span>Backend Core / SaaS</span>
+                <span className="text-[10px] sm:text-xs font-mono uppercase tracking-widest text-espresso-muted flex items-center gap-1">
+                  <span className="text-bronze">◈</span>
+                  <span>{project.category.includes('WordPress') ? 'WordPress Build' : 'Backend Core / SaaS'}</span>
                 </span>
               )}
             </div>
@@ -123,9 +124,9 @@ const ProjectCard = ({ project, index }) => {
                 href={project.githubLink} 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="text-xs font-mono uppercase tracking-widest text-espresso-body hover:text-espresso-dark font-semibold transition-colors flex items-center gap-1"
+                className="text-[10px] sm:text-xs font-mono uppercase tracking-widest text-espresso-body hover:text-espresso-dark font-semibold transition-colors flex items-center gap-1"
               >
-                <span>Source Code</span>
+                <span>Source</span>
                 <span>→</span>
               </a>
             )}
@@ -144,23 +145,23 @@ const Projects = () => {
       
       <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-6 mb-16">
         <div>
-          <h2 className="font-display font-bold text-4xl md:text-6xl text-espresso-dark leading-tight">
+          <h2 className="font-display font-bold text-3xl sm:text-4xl md:text-6xl text-espresso-dark leading-tight">
             ENGINEERED <span className="text-bronze">SYSTEMS</span> &<br/>
             PRODUCTION PLATFORMS
           </h2>
-          <p className="text-espresso-body text-sm md:text-base font-sans mt-3 max-w-xl font-medium">
-            Selected SaaS systems, catalog architectures, API engines, and e-commerce applications built for performance.
+          <p className="text-espresso-body text-xs sm:text-sm md:text-base font-sans mt-3 max-w-xl font-medium">
+            Selected SaaS systems, CRM platforms, WordPress builds, catalog architectures, API engines, and e-commerce applications built for performance.
           </p>
         </div>
 
-        <div className="flex items-center gap-3">
-          <StitchBadge variant="cyan">5 PRODUCTION SHIPPED</StitchBadge>
+        <div className="flex items-center gap-3 flex-wrap">
+          <StitchBadge variant="cyan">12 PRODUCTION SHIPPED</StitchBadge>
           <StitchBadge variant="dashed">CLEAN CODEBASE</StitchBadge>
         </div>
       </div>
 
       {/* Projects Grid */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-2 gap-6 md:gap-8">
         {PROJECTS.map((project, i) => (
           <ProjectCard key={project.id || i} project={project} index={i} />
         ))}

@@ -18,8 +18,6 @@ const About = () => {
   return (
     <section id="about" className="section-container relative bg-[#EDE5DC]/40">
       <SectionLabel text="ENGINEERING PHILOSOPHY // 02" className="mb-8" />
-
-      {/* Background Typography Watermark */}
       <div className="absolute top-10 right-0 pointer-events-none select-none overflow-hidden text-right opacity-[0.03] z-0">
         <span className="font-display font-bold text-[22vw] leading-none text-[#231709]">
           ARCHITECT
@@ -28,7 +26,6 @@ const About = () => {
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 relative z-10 pt-4">
         
-        {/* Left Side: Stats & Core Principles (Col 5) */}
         <div className="lg:col-span-5 flex flex-col justify-between">
           <div>
             <div className="text-[100px] md:text-[130px] font-display font-bold text-[#B89F88]/30 leading-none mb-6">
@@ -45,7 +42,6 @@ const About = () => {
             </p>
           </div>
 
-          {/* Stitched Stats Grid */}
           <div className="grid grid-cols-2 gap-4 pt-6 border-t border-[#DECFC0]">
             {PERSONAL_INFO.stats.map((stat, i) => (
               <div 
@@ -64,11 +60,7 @@ const About = () => {
             ))}
           </div>
         </div>
-
-        {/* Right Side: Detailed Bio & Interactive Terminal (Col 7) */}
         <div className="lg:col-span-7 space-y-8">
-          
-          {/* Main Bio Card */}
           <div className="p-8 rounded-2xl bg-white border border-[#DECFC0] shadow-sm backdrop-blur-xl relative">
             <div className="flex items-center justify-between mb-6 pb-4 border-b border-[#DECFC0]">
               <div className="flex items-center gap-2">
@@ -103,8 +95,6 @@ const About = () => {
               </div>
             </div>
           </div>
-
-          {/* Interactive Developer Specs Terminal */}
           <div className="rounded-2xl bg-[#231709] border border-[#4A3525] overflow-hidden font-mono text-xs shadow-xl">
             <div className="px-4 py-2.5 bg-[#231709]/95 border-b border-[#4A3525]/60 flex items-center justify-between">
               <div className="flex items-center gap-2">

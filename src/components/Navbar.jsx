@@ -1,11 +1,9 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState('hero');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
   const navLinks = [
     { name: 'Home', href: '#hero' },
     { name: 'About', href: '#about' },
@@ -15,14 +13,11 @@ const Navbar = () => {
     { name: 'Services', href: '#services' },
     { name: 'Contact', href: '#contact' },
   ];
-
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 30);
-
       const sections = navLinks.map(link => link.href.substring(1));
       const scrollPosition = window.scrollY + 200;
-
       for (const section of sections) {
         const el = document.getElementById(section);
         if (el) {
@@ -35,11 +30,9 @@ const Navbar = () => {
         }
       }
     };
-
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
   return (
     <motion.nav 
       initial={{ y: -80, opacity: 0 }}
@@ -52,9 +45,7 @@ const Navbar = () => {
       }`}
     >
       <div className="max-w-[1400px] mx-auto px-6 md:px-16 lg:px-24 flex justify-between items-center">
-        
-        {/* Brand / Logo */}
-        <a href="#hero" className="flex items-center gap-3 group cursor-pointer">
+                <a href="#hero" className="flex items-center gap-3 group cursor-pointer">
           <div className="w-8 h-8 rounded-lg bg-[#231709] border border-[#4A3525] flex items-center justify-center font-mono text-xs font-bold text-white shadow-sm group-hover:bg-[#A75D2B] transition-colors">
             AF
           </div>
@@ -68,8 +59,6 @@ const Navbar = () => {
             </span>
           </div>
         </a>
-
-        {/* Desktop Nav Items */}
         <div className="hidden lg:flex items-center gap-1 bg-white/90 border border-[#DECFC0] rounded-full px-4 py-1.5 backdrop-blur-xl shadow-sm">
           {navLinks.map((link) => {
             const isActive = activeSection === link.href.substring(1);
@@ -88,8 +77,6 @@ const Navbar = () => {
             );
           })}
         </div>
-
-        {/* Tactical Status & Actions */}
         <div className="hidden md:flex items-center gap-4">
           <a 
             href="/Muhammad_Ahmad_Fasih.pdf" 
@@ -101,8 +88,6 @@ const Navbar = () => {
             Download CV ↓
           </a>
         </div>
-
-        {/* Mobile Menu Toggle Button */}
         <button 
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           className="lg:hidden p-2 rounded-lg bg-white border border-[#DECFC0] text-[#231709] focus:outline-none shadow-sm"
@@ -116,10 +101,7 @@ const Navbar = () => {
             )}
           </svg>
         </button>
-
       </div>
-
-      {/* Mobile Menu Dropdown */}
       {mobileMenuOpen && (
         <motion.div 
           initial={{ opacity: 0, height: 0 }}
@@ -153,5 +135,4 @@ const Navbar = () => {
     </motion.nav>
   );
 };
-
 export default Navbar;
