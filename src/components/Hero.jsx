@@ -47,8 +47,8 @@ const Hero = () => {
                   'LangChain / CrewAI',
                   'Clean Architecture'
                 ].map((tech) => (
-                  <span 
-                    key={tech} 
+                  <span
+                    key={tech}
                     className="px-3 py-1 bg-white border border-[#DECFC0] rounded-md text-[10px] font-mono text-[#382618] hover:border-[#A75D2B] hover:text-[#A75D2B] transition-all font-semibold shadow-sm"
                   >
                     + {tech}
@@ -56,15 +56,15 @@ const Hero = () => {
                 ))}
               </div>
               <div className="flex flex-wrap items-center gap-4">
-                <a 
-                  href="#projects" 
+                <a
+                  href="#projects"
                   className="px-6 py-3 rounded-lg bg-[#231709] text-white font-mono text-xs uppercase tracking-widest font-bold hover:bg-[#A75D2B] transition-all duration-300 shadow-md flex items-center gap-2 group"
                 >
                   <span>Explore Projects</span>
                   <span className="group-hover:translate-x-1 transition-transform">→</span>
                 </a>
-                <a 
-                  href="#contact" 
+                <a
+                  href="#contact"
                   className="px-6 py-3 rounded-lg bg-white border border-[#DECFC0] text-[#231709] font-mono text-xs uppercase tracking-widest hover:border-[#A75D2B] hover:bg-[#EDE5DC] transition-all duration-300 flex items-center gap-2 shadow-sm font-bold"
                 >
                   <span>Contact Architect</span>
@@ -86,26 +86,12 @@ const Hero = () => {
                   </span>
                 </div>
                 <div className="relative aspect-[4/5] rounded-xl overflow-hidden bg-[#EDE5DC] border border-[#DECFC0] group">
-                  <img 
-                    src="/portrait.png" 
-                    alt="Muhammad Ahmad Faseeh" 
-                    className="w-full h-full object-cover object-top transition-all duration-700 group-hover:scale-105"
+                  <img
+                    src="/portrait_original.png"
+                    alt="Muhammad Ahmad Faseeh"
+                    className="w-full h-full object-cover object-top transition-all duration-700 "
                   />
                 </div>
-                <div className="grid grid-cols-2 gap-2 mt-3 pt-3 border-t border-[#DECFC0] text-[9px] font-mono">
-                  <div className="p-2 rounded bg-[#F5EFEB] border border-[#DECFC0]">
-                    <span className="text-[#7D634E] block font-semibold">CORE STACK</span>
-                    <span className="text-[#231709] font-bold">FastAPI / Node / Docker</span>
-                  </div>
-                  <div className="p-2 rounded bg-[#F5EFEB] border border-[#DECFC0]">
-                    <span className="text-[#7D634E] block font-semibold">DELIVERY</span>
-                    <span className="text-[#A75D2B] font-bold">Clean Architecture</span>
-                  </div>
-                </div>
-                <div className="absolute -top-1.5 -left-1.5 text-xs text-[#A75D2B] font-mono font-bold">+</div>
-                <div className="absolute -top-1.5 -right-1.5 text-xs text-[#A75D2B] font-mono font-bold">+</div>
-                <div className="absolute -bottom-1.5 -left-1.5 text-xs text-[#A75D2B] font-mono font-bold">+</div>
-                <div className="absolute -bottom-1.5 -right-1.5 text-xs text-[#A75D2B] font-mono font-bold">+</div>
               </div>
             </motion.div>
           </div>
@@ -113,7 +99,7 @@ const Hero = () => {
         <div className="flex justify-center items-center gap-3 mt-16 text-[10px] font-mono text-[#7D634E] uppercase tracking-widest font-bold">
           <span>Scroll to explore</span>
           <div className="w-4 h-7 rounded-full border border-[#B89F88] flex justify-center pt-1">
-            <motion.div 
+            <motion.div
               animate={{ y: [0, 8, 0] }}
               transition={{ repeat: Infinity, duration: 1.5 }}
               className="w-1 h-1 rounded-full bg-[#A75D2B]"

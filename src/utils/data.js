@@ -12,7 +12,7 @@ export const PERSONAL_INFO = {
   bio: "Software Engineer with hands-on experience building scalable backend services in Python (FastAPI), Node.js, and Next.js, and interactive front-ends in React.js. Skilled in containerizing and deploying applications with Docker, designing RESTful & GraphQL APIs, and writing clean, readable, reusable, and well-documented code with strong analytical reasoning for debugging and evaluating architectural trade-offs.",
   stats: [
     { value: "02+", label: "Years Experience", numeric: 2 },
-    { value: "10+", label: "Production Projects", numeric: 10 },
+    { value: "12+", label: "Production Projects", numeric: 12 },
     { value: "25+", label: "Technologies Mastered", numeric: 25 },
     { value: "99.9%", label: "Clean Architecture", numeric: 99.9 }
   ],
@@ -157,6 +157,19 @@ export const PROJECTS = [
     image: "/cerahi_crm.png",
     demoLink: "",
     githubLink: "https://github.com/AhmadIntern"
+  },
+  {
+    id: "mausam-x",
+    title: "MausamX Live 3D Weather",
+    subtitle: "Real-Time 3D Weather & Live Doppler Radar Intelligence",
+    category: "Full-Stack 3D Web App",
+    featured: true,
+    tech: ["React.js", "Three.js", "Vite", "Tailwind CSS", "REST API", "Doppler Radar", "OpenWeather"],
+    description: "Engineered a real-time 3D weather intelligence platform featuring live interactive Doppler radar, air quality indexing (AQI), 24-hour / 7-day predictive forecasts, astronomical sun/moon cycles, and global multi-city search with fluid animations.",
+    metrics: ["Live Doppler radar & maps", "Real-time 3D Three.js weather", "Global multi-city AQI metrics"],
+    image: "/mausam_x_v2.png",
+    demoLink: "https://mausam-x.vercel.app/",
+    githubLink: "https://github.com/AhmadFaseeh/MausamX"
   },
   {
     id: "cerahi-dentistry",
