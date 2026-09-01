@@ -160,7 +160,7 @@ export const PROJECTS = [
   },
   {
     id: "mausam-x",
-    title: "MausamX Live 3D Weather",
+    title: "MausamX Live Weather",
     subtitle: "Real-Time 3D Weather & Live Doppler Radar Intelligence",
     category: "Full-Stack 3D Web App",
     featured: true,
@@ -199,7 +199,7 @@ export const PROJECTS = [
   },
   {
     id: "tothewebpro",
-    title: "To The Web Pro",
+    title: "ToTheWebPro",
     subtitle: "SEO Analysis Suite & Web Developer Tools Engine",
     category: "Full-Stack Web Utilities",
     featured: false,
