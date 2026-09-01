@@ -4,17 +4,14 @@ import confetti from 'canvas-confetti';
 import { SectionLabel, BrowserMockup, StitchBadge } from './Common';
 import { PERSONAL_INFO } from '../utils/data';
 import emailjs from '@emailjs/browser';
-
 const EMAILJS_SERVICE_ID  = import.meta.env.VITE_EMAILJS_SERVICE_ID || 'service_portfolio';
 const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || 'template_portfolio';
 const EMAILJS_PUBLIC_KEY  = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || 'user_portfolio';
-
 const Contact = () => {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState('');
-
   const triggerConfetti = () => {
     try {
       confetti({
@@ -27,13 +24,11 @@ const Contact = () => {
       console.log('Confetti triggered', e);
     }
   };
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!formData.name || !formData.email || !formData.message) return;
     setIsSubmitting(true);
     setError('');
-
     try {
       if (EMAILJS_SERVICE_ID && EMAILJS_TEMPLATE_ID && EMAILJS_PUBLIC_KEY && EMAILJS_SERVICE_ID !== 'service_portfolio') {
         await emailjs.send(
@@ -61,7 +56,6 @@ const Contact = () => {
       setIsSubmitting(false);
     }
   };
-
   return (
     <section id="contact" className="section-container relative pt-32 pb-20 bg-sand-medium/30">
       <SectionLabel text="GET IN TOUCH // 08" className="mb-8" />
@@ -127,10 +121,10 @@ const Contact = () => {
                 download="Muhammad_Ahmad_Fasih.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full py-3 rounded-lg bg-sand-medium border border-sand-border hover:border-bronze text-espresso-dark font-mono text-xs uppercase tracking-widest flex items-center justify-center gap-2 hover:bg-sand-badge/60 transition-all font-bold group shadow-sm cursor-pointer"
+                className="w-full py-3 px-3 rounded-lg bg-sand-medium border border-sand-border hover:border-bronze text-espresso-dark font-mono text-[10px] sm:text-xs uppercase tracking-normal sm:tracking-widest flex items-center justify-center gap-2 hover:bg-sand-badge/60 transition-all font-bold group shadow-sm cursor-pointer whitespace-nowrap"
               >
                 <span>Download Curriculum Vitae (PDF)</span>
-                <span className="text-bronze group-hover:translate-y-0.5 transition-transform font-bold">↓</span>
+                <span className="text-bronze group-hover:translate-y-0.5 transition-transform font-bold shrink-0">↓</span>
               </a>
             </div>
           </div>
@@ -191,42 +185,38 @@ const Contact = () => {
                   className="p-6 md:p-8"
                 >
                   <div className="mb-6 pb-3 border-b border-sand-border flex items-center justify-between text-[10px] font-mono text-espresso-muted uppercase tracking-widest font-semibold">
-                    <span>SYS_INPUT // ENTER DISPATCH PAYLOAD</span>
-                    <span className="text-bronze font-bold">SECURE_TRANSMIT</span>
+                    <span className="text-bronze font-bold">Lets Connect</span>
                   </div>
-
                   <form onSubmit={handleSubmit} className="space-y-4">
                     <div>
                       <label className="block text-[10px] font-mono uppercase tracking-widest text-espresso-muted mb-1.5 font-bold">
                         Your Full Name *
                       </label>
                       <input 
-                        type="text" 
-                        placeholder="e.g. Alex Morgan" 
+                        type="text"   
+                        placeholder="Full Name" 
                         required
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                         className="w-full bg-sand-medium/50 border border-sand-border focus:border-bronze rounded-lg px-4 py-2.5 text-xs text-espresso-dark font-mono placeholder-espresso-muted/60 outline-none transition-all font-medium"
                       />
                     </div>
-
                     <div>
                       <label className="block text-[10px] font-mono uppercase tracking-widest text-espresso-muted mb-1.5 font-bold">
                         Your Email Address *
                       </label>
                       <input 
                         type="email" 
-                        placeholder="e.g. alex@company.com" 
+                        placeholder="Email Address" 
                         required
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                         className="w-full bg-sand-medium/50 border border-sand-border focus:border-bronze rounded-lg px-4 py-2.5 text-xs text-espresso-dark font-mono placeholder-espresso-muted/60 outline-none transition-all font-medium"
                       />
                     </div>
-
                     <div>
                       <label className="block text-[10px] font-mono uppercase tracking-widest text-espresso-muted mb-1.5 font-bold">
-                        Your Message / Project Specs *
+                        Your Message
                       </label>
                       <textarea 
                         placeholder="Describe your project, role opportunity, or architectural requirements..." 
@@ -237,7 +227,6 @@ const Contact = () => {
                         className="w-full bg-sand-medium/50 border border-sand-border focus:border-bronze rounded-lg px-4 py-2.5 text-xs text-espresso-dark font-mono placeholder-espresso-muted/60 outline-none resize-none transition-all font-medium"
                       />
                     </div>
-
                     <button
                       type="submit"
                       disabled={isSubmitting}
@@ -252,7 +241,6 @@ const Contact = () => {
                         </>
                       )}
                     </button>
-
                     {error && (
                       <p className="text-rose-600 text-[10px] font-mono mt-2 text-center">{error}</p>
                     )}
@@ -262,10 +250,8 @@ const Contact = () => {
             </AnimatePresence>
           </BrowserMockup>
         </div>
-
       </div>
     </section>
   );
 };
-
 export default Contact;

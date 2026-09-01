@@ -51,8 +51,7 @@ const Navbar = () => {
           </div>
           <div className="flex flex-col">
             <span className="font-mono text-xs font-bold tracking-widest text-[#231709] flex items-center gap-1.5">
-              AHMAD FASEEH
-              <span className="inline-block w-1.5 h-1.5 rounded-full bg-[#A75D2B] animate-pulse" />
+             MUHAMMAD AHMAD FASEEH
             </span>
             <span className="font-mono text-[8px] text-[#7D634E] uppercase tracking-widest font-semibold">
               Software Engineer
